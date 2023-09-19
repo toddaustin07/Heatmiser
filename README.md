@@ -13,7 +13,7 @@ This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (
 
 ### Pre-requisites
 * SmartThings Hub
-* Heatmiser Neohub
+* Heatmiser Neohub (second generation)
 * One or more Heatmiser Neostats
 * neoHub API Access Token
 
@@ -25,7 +25,7 @@ Note that all the above devices must reside on the same subnet of your network. 
 * The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
 ## neoHub API Access Token Creation
--- To be added --
+Use the Heatmiser app and go to *Settings > API* and create a Token.  Be sure to save this somewhere safe, and where you can later copy and paste it into a SmartThings device Settings screen.
 
 ## Driver Installation
 You should have an installed, configured, and operating Heatmiser system including Neohub and one or more Neostats.
