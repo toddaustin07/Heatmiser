@@ -80,7 +80,9 @@ This will show the current state of the system (Heating or Idle)
 This is a control to set the mode of the system to either Auto or Standby
 
 ##### Heating temperature
-This is a control to set the heating setpoint temperature 
+When in Auto mode, this control sets the heating setpoint temperature.  When in Standby mode, and if frost protection is enabled for your zone, this control can be used to adjust the frost setpoint temperature in the range of 7 to 17 degrees Celsius.
+
+Note that if in Standby mode and frost protection is disabled for your zone, this value will automatically be set to 4 degrees Celsius, and changing the value will have to affect on the thermostat.
 
 ##### Hold
 Tapping the button will request Hold to be enabled; tapping again will disable.  The hold duration requested is configured below.
