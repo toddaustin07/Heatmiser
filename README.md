@@ -2,7 +2,7 @@
 This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (Neostats).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
 
 ## Supported States and Controls
-* Temperature
+* Current temperature
 * Operating State (Heat, Idle)
 * Set mode (Auto, Standby)
 * Set heating setpoint temperature and frost protection temperature (if enabled)
