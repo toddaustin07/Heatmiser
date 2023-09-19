@@ -83,9 +83,11 @@ This will show the current state of the system (Heating or Idle)
 This is a control to set the mode of the system to either Auto or Standby
 
 ##### Heating temperature
-When in Auto mode, this control sets the heating setpoint temperature.  When in Standby mode, and if frost protection is enabled for your zone, this control can be used to adjust the frost setpoint temperature in the range of 7 to 17 degrees Celsius.
+When in Auto mode, this control sets the heating setpoint temperature.  
 
-Note that if in Standby mode and frost protection is disabled for your zone, this value will automatically be set to 4 degrees Celsius, and changing the value will have to affect on the thermostat.
+When in Standby mode, if frost protection is **enabled** for your zone, this control can be used to adjust the frost setpoint temperature in the range of 7 to 17 degrees Celsius.
+
+If in Standby mode, and frost protection is **disabled** for your zone, this value will automatically be set to 4 degrees Celsius, and changing the value will have no affect on the thermostat.
 
 ##### Hold
 Tapping the button will request Hold to be enabled; tapping again will disable.  The hold duration requested is configured below.
@@ -99,7 +101,7 @@ A list of available Profiles available on your system will be displayed and can 
 *Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
 ##### Status
-This field generally show the last time the data has been updated, or other messages if the neoHub has not been connected to.
+This field generally shows the last time the neoStat data has been updated, or may contain other messages if the neoHub has not been connected to.
 
 ##### Info
 This is a table of additional useful information to monitor your zone, such as the current active profile, away state, available modes, device battery state, and zone name
