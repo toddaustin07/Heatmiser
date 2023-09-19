@@ -28,7 +28,7 @@ Note that the SmartThings hub and Heatmiser neoHub devices must reside on the sa
 Use the Heatmiser app and go to *Settings > API* and create a Token.  Be sure to save this somewhere safe, and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device.
 
 ## Driver Installation
-You should have an installed, configured, and operating Heatmiser system including Neohub and one or more Neostats.
+Before proceding, you should have an installed, configured, and operating Heatmiser system including Neohub and one or more Neostats.
 
 ### Driver Installation
 The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "Heatmiser V0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
