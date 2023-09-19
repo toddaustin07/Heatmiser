@@ -17,7 +17,7 @@ This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (
 * One or more Heatmiser Neostats
 * neoHub API Access Token
 
-Note that all the above devices must reside on the same subnet of your network.  In other words, they must all be on 192.168.1.n, for example.
+Note that all the SmartThings and neoHub devices must reside on the same subnet of your network.  In other words, they must all be on 192.168.1.n, for example.
 
 ### Limitations
 * The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple Neohubs.
@@ -53,13 +53,16 @@ Here you provide the token you created above through the Heatmiser app
 Your neoHub will be polled on a periodic basis to get the latest data from all your thermostats.  Configure how often you want this to occur.  The default is every 60 seconds.  More frequent polling will require more driver activity on the SmartThings hub, more network activity, and more processing required for the neoHub, so take this into account when choosing your desired frequency.
 
 ##### Temperature Units
-This is defaulted to Celsius, but can be changed to Fahrenheit if that is your temperature units at your location.
+This is defaulted to Celsius, but can be changed to Fahrenheit if that is the temperature-unit at your location.
 
+#### neoStat Device Creation
 Once you complete configuration, return to the device Controls screen.  You should now see a Status of "Connected" if your API Access Token was accepted, and you should see a table of information appear in the Info section.
 
 At this point you will also start to see thermostat devices created for each neoStat (or zone) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "Neostat: xxxxxx", where "xxxxxx" is the name of the configured zone.
 
 Within 15-20 seconds the data should get refreshed in each of the new thermostat devices and show the correct current states.
+
+
 
 ## Using the Devices
 
@@ -68,7 +71,7 @@ The devices provide the most critical information and functions for your system,
 ### neoStat Devices
 The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
 
-In addition, you can perform a swipe-down gesture on the Controls screen to force an immediate data refresh.
+In addition, at any time you can perform a swipe-down gesture on the Controls screen to force an immediate data refresh.
 
 ##### Temperature
 This shows the current zone temperature.
@@ -120,3 +123,14 @@ A list of available Profiles available on your system will be displayed and can 
 
 ##### Info
 This is a table of additional useful information related to your neoHub configuration.
+
+## Additional Information
+### Problems
+* If your neoHub device is not found during network scan, be sure it is on the same subnet as your SmartThings hub.  The discovery method used is mDNS; neoHubs should be making themselves known on the network via this method.
+* If your neoHub device is not connecting to your neoHub, it is most likely due to an invalid API Access Token.  Check that you have entered it correctly (copy/pasting is the safest way to do it), and that there are no extraneous leading or trailing spaces.
+* If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reconnection to the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
+
+### Deleting Heatmiser Driver Devices
+* If you manually delete any of your SmartThings neoStat devices, they will get re-created the next time the driver connects to the neoHub (this can be forced to happen at any time by swiping down on the neoHub device Controls screen).
+
+* If you want to permanently delete all your Heatmiser devices, simply delete the neoHub device, and all its associated neoStat devices will also be deleted automatically (they are 'child' devices).
