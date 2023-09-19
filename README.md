@@ -96,6 +96,8 @@ This sets the hours and minutes for the requested Hold.  Format must be hh:mm / 
 ##### Set Thermostat Profile
 A list of available Profiles available on your system will be displayed and can be selected for activation.  Note that the Profile must be enabled for the zone requested.
 
+*Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
+
 ##### Status
 This field generally show the last time the data has been updated, or other messages if the neoHub has not been connected to.
 
@@ -120,6 +122,8 @@ This button is used to enable or disable Away status for your system.  Note that
 
 ##### Set Thermostat Profile
 A list of available Profiles available on your system will be displayed and can be selected for activation.  Note that the Profile will only apply to the zones it is configured for.
+
+*Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
 ##### Info
 This is a table of additional useful information related to your neoHub configuration.
