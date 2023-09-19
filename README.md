@@ -142,7 +142,7 @@ This is a table of additional useful information related to your neoHub configur
 ## Additional Information
 ### Problems
 * If your neoHub device is not found during network scan, be sure it is on the same subnet as your SmartThings hub.  The discovery method used is mDNS; neoHubs should be making themselves known on the network via this method.
-* If your neoHub device is not connecting to your neoHub, it is most likely due to an invalid API Access Token.  Check that you have entered it correctly (copy/pasting is the safest way to do it), and that there are no extraneous leading or trailing spaces.
+* If your SmartThings neoHub device is not connecting to your neoHub, it is most likely due to an invalid API Access Token.  Check that you have entered it correctly (copy/pasting is the safest way to do it), and that there are no extraneous leading or trailing spaces.
 * If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reconnection to the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
 
 ### Deleting Heatmiser Driver Devices
