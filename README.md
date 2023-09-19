@@ -117,7 +117,7 @@ The controls available on this device (Standby All, Away, Set Profile) are inten
 Generally this should show "Connected" in normal operation, but if the connection is lost with your neoHub it will show other messages.
 
 ##### Standy All
-This button allows you to perform a "one-shot" setting of all thermostats to either Standby mode ON or Standby mode OFF.
+This button allows you to perform a "one-shot" setting of all thermostats to either Standby mode ON or Standby mode OFF (Auto).
 
 ##### Away
 This button is used to enable or disable Away status for your system.  Note that the "HUB_AWAY" item in the Info table will also show the current Away status.
