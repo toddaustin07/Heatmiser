@@ -5,7 +5,7 @@ This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (
 * Temperature
 * Operating State (Heat, Idle)
 * Set mode (Auto, Standby)
-* Set heating setpoint temperature
+* Set heating setpoint temperature and frost protection temperature (if enabled)
 * Hold with duration
 * Select active Profile
 * Set all thermostats to Standby or Auto
