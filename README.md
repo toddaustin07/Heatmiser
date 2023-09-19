@@ -25,10 +25,15 @@ Note that the SmartThings hub and Heatmiser neoHub devices must reside on the sa
 * The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
 ## neoHub API Access Token Creation
-Use the Heatmiser app and go to *Settings > API* and create a Token.  Be sure to save this somewhere safe, and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device.
+Ensure your mobile device is on the same subnet as your neoHub, and use the Heatmiser app and go to *Settings > API* and create a Token.  
+Be sure to save this somewhere safe (use the copy icon next to the generated Token), and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device. 
+
+#### Known issues
+* The Token may disappear from the Heatmiser app after you create it; a reboot of the newHub may fix this
+* A bug in the Heatmiser app exists that may prevent iOS mobile devices from creating the Token
 
 ## Driver Installation
-Before proceding, you should have an installed, configured, and operating Heatmiser system including Neohub and one or more Neostats.
+Before proceding, you should have an installed, configured, and operating Heatmiser system including a Neohub and one or more Neostats.
 
 ### Driver Installation
 The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "Heatmiser V0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
@@ -96,7 +101,9 @@ Tapping the button will request Hold to be enabled; tapping again will disable. 
 This sets the hours and minutes for the requested Hold.  Format must be hh:mm / h:mm / hh:m / h:m, with leading 0's optional (e.g. 01:15 or 1:15), where 'hh' (hours) is 00-23 and 'mm' (minutes) is 00-59.
 
 ##### Set Thermostat Profile
-A list of available Profiles available on your system will be displayed and can be selected for activation.  Note that the Profile must be enabled for the zone requested.
+A list of available Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create Profiles and they are not listed, then force a reconnection/reinitialization with the hub by swiping down on the **neoHub** Controls screen.
+
+Keep in mind that the Profile you select must be enabled for the zone requested.
 
 *Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
@@ -123,7 +130,9 @@ This button allows you to perform a "one-shot" setting of all thermostats to eit
 This button is used to enable or disable Away status for your system.  Note that the "HUB_AWAY" item in the Info table will also show the current Away status.
 
 ##### Set Thermostat Profile
-A list of available Profiles available on your system will be displayed and can be selected for activation.  Note that the Profile will only apply to the zones it is configured for.
+A list of available Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create Profiles and they are not listed, then force a reconnection/reinitialization with the hub by swiping down on the neoHub Controls screen.
+
+Keep in mind that the Profile you select must be enabled for the zone requested.
 
 *Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
