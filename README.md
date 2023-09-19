@@ -17,7 +17,7 @@ This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (
 * One or more Heatmiser Neostats
 * neoHub API Access Token
 
-Note that all the SmartThings and neoHub devices must reside on the same subnet of your network.  In other words, they must all be on 192.168.1.n, for example.
+Note that the SmartThings hub and Heatmiser neoHub devices must reside on the same subnet of your network.  In other words, they must all be on 192.168.1.n, for example.
 
 ### Limitations
 * The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple Neohubs.
