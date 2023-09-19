@@ -25,8 +25,8 @@ Note that the SmartThings hub and Heatmiser neoHub devices must reside on the sa
 * The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
 ## neoHub API Access Token Creation
-Ensure your mobile device is on the same subnet as your neoHub, and use the Heatmiser app and go to *Settings > API* and create a Token.  
-Be sure to save this somewhere safe (use the copy icon next to the generated Token), and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device. 
+1. Ensure your mobile device is on the same subnet as your neoHub, and use the Heatmiser app and go to *Settings > API* and create a Token.  
+2. Be sure to save the generated Token somewhere safe (use the copy icon next to the generated Token), and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device. 
 
 #### Known issues
 * The Token may disappear from the Heatmiser app after you create it; a reboot of the newHub may fix this
