@@ -1,5 +1,5 @@
 # Heatmiser SmartThings Driver supporting Neohubs and Neostats
-This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (Neostats).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
+This is a SmartThings Edge Driver for Heatmiser Hubs (neoHubs) and Thermostats (neoStats).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
 
 ## Supported States and Controls
 * Current temperature
@@ -13,14 +13,14 @@ This is a SmartThings Edge Driver for Heatmiser Hubs (Neohubs) and Thermostats (
 
 ### Pre-requisites
 * SmartThings Hub
-* Heatmiser Neohub (second generation)
-* One or more Heatmiser Neostats
+* Heatmiser neoHub (second generation)
+* One or more Heatmiser neoStats
 * neoHub API Access Token
 
 Note that the SmartThings hub and Heatmiser neoHub devices must reside on the same subnet of your network.  In other words, they must all be on 192.168.1.n, for example.
 
 ### Limitations
-* The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple Neohubs.
+* The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple neoHubs.
 * The driver supports Neostat thermostat devices only so far; support has not yet been added for other types of Heatmiser devices such as plugs, air sensors, etc, although that is being considered
 * The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
@@ -29,11 +29,11 @@ Note that the SmartThings hub and Heatmiser neoHub devices must reside on the sa
 2. Be sure to save the generated Token somewhere safe (use the copy icon next to the generated Token), and where you can later copy and paste it into a SmartThings device Settings screen on your mobile device. 
 
 #### Known issues
-* The Token may disappear from the Heatmiser app after you create it; a reboot of the newHub may fix this
+* The Token may disappear from the Heatmiser app after you create it; a reboot of the neoHub may fix this
 * A bug in the Heatmiser app exists that may prevent iOS mobile devices from creating the Token
 
 ## Driver Installation
-Before proceding, you should have an installed, configured, and operating Heatmiser system including a Neohub and one or more Neostats.
+Before proceding, you should have an installed, configured, and operating Heatmiser system including a neoHub and one or more neoStats.
 
 ### Driver Installation
 The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "heatmiser v0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
@@ -46,9 +46,9 @@ Note:  If no neoHub devices are found via the network scan, a "manual" version o
 
 Once your device has been created, you will first need to configure a couple options in the neoHub device Settings screen.  Open the device to the Controls screen and then tap the three vertical dot menu in the upper right corner and select "Settings".
 
-It is recommended to edit these settings in the reverse order in which they appear - in other words, for automatically-found neoHub devices, configure the API Access Token last.  For manually created newHub devices, configure the Device Address last.
+It is recommended to edit these settings *in the reverse order in which they appear* - in other words, for automatically-found neoHub devices, configure the API Access Token last.  For manually created newHub devices, configure the Device Address last.
 
-##### Device Address ('manual' hub devices only)
+##### Device Address ('manually-created' hub devices only)
 Here you configure the IP address of your neoHub device if it wasn't automatically found during network scan.
 
 ##### Neohub API Access Token
@@ -67,16 +67,16 @@ At this point you will also start to see thermostat devices created for each neo
 
 Within 15-20 seconds the data should get refreshed in each of the new thermostat devices and show the correct current states.
 
-
-
 ## Using the Devices
 
-The devices provide the most critical information and functions for your system, but is not intended to replicate ALL functions of the Heatmiser app.  The purpose of having these devices integrated within SmartThings is to give the user a way to build automations that trigger based on thermostat states or that control your thermostats based on other SmartThings device states.
+The devices provide the most critical information and functions for your system, but are not intended to replicate ALL functions of the Heatmiser app.  The purpose of having these devices integrated within SmartThings is to give the user a way to build automations that trigger based on thermostat states or that control your thermostats based on other SmartThings device states.
 
 ### neoStat Devices
-The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
+The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  
 
-In addition, at any time you can perform a swipe-down gesture on the Controls screen to force an immediate data refresh.
+If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
+
+In addition, at any time you can perform a swipe-down gesture on the Controls screen to cause an *immediate* data refresh.
 
 ##### Temperature
 This shows the current zone temperature.
@@ -95,7 +95,7 @@ When in Standby mode, if frost protection is **enabled** for your zone, this con
 If in Standby mode, and frost protection is **disabled** for your zone, this value will automatically be set to 4 degrees Celsius, and changing the value will have no affect on the thermostat.
 
 ##### Hold
-Tapping the button will request Hold to be enabled; tapping again will disable.  The hold duration requested is configured below.
+Tapping this button will request Hold to be enabled; tapping again will disable.  The hold duration requested is configured below.
 
 ##### Hold Duration
 This sets the hours and minutes for the requested Hold.  Format must be hh:mm / h:mm / hh:m / h:m, with leading 0's optional (e.g. 01:15 or 1:15), where 'hh' (hours) is 00-23 and 'mm' (minutes) is 00-59.
@@ -111,12 +111,14 @@ Keep in mind that the Profile you select must be enabled for the zone requested.
 This field generally shows the last time the neoStat data has been updated, or may contain other messages if the neoHub has not been connected to.
 
 ##### Info
-This is a table of additional useful information to monitor your zone, such as the current active profile, away state, available modes, device battery state, and zone name
+This is a table of additional useful information to monitor your zone, such as the currently-active profile, away state, available modes, device battery state, and zone name
 
 
 ### neoHub Device
 
-The user can perform a swipe-down gesture on the Controls screen to force a re-connection with the neoHub if he/she expects the connection has been lost.  Generally, the Status field should be used to monitor the connection state.
+The user can perform a swipe-down gesture on the Controls screen to force a re-connection with the neoHub if he/she expects the connection has been lost or hub data is not correct.  Generally, the Status field should be used to monitor the connection state.
+
+Note that if the connection to the hub is lost at any time, there will be an automatic connection retry every 15 seconds, so normally disconnects should eventually recover without user action.
 
 The controls available on this device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Thermostat-specific actions should be performed from the respective neoStat device Controls screen.
 
