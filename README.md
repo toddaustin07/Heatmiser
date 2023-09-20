@@ -36,7 +36,7 @@ Note that the SmartThings hub and Heatmiser neoHub devices must reside on the sa
 Before proceding, you should have an installed, configured, and operating Heatmiser system including a Neohub and one or more Neostats.
 
 ### Driver Installation
-The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "Heatmiser V0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
+The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "heatmiser v0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
 
 Once the driver is available on your SmartThings hub, the next time you use the SmartThings app to perform an *Add device / Scan for nearby devices*, your network will be scanned for any present Heatmiser Neohubs.  When found, a SmartThings device called "Heatmiser neoHub" will be created and found in the same room as your SmartThings hub device.
 
@@ -63,7 +63,7 @@ This is defaulted to Celsius, but can be changed to Fahrenheit if that is the te
 #### neoStat Device Creation
 Once you complete configuration, return to the device Controls screen.  You should now see a Status of "Connected" if your API Access Token was accepted, and you should see a table of information appear in the Info section.
 
-At this point you will also start to see thermostat devices created for each neoStat (or zone) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "Neostat: xxxxxx", where "xxxxxx" is the name of the configured zone.
+At this point you will also start to see thermostat devices created for each neoStat (or zone) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "neoStat: xxxxxx", where "xxxxxx" is the name of the configured zone.
 
 Within 15-20 seconds the data should get refreshed in each of the new thermostat devices and show the correct current states.
 
