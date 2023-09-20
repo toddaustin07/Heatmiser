@@ -21,7 +21,7 @@ Note that the SmartThings hub and heatmiser neoHub devices must reside on the sa
 
 ### Limitations
 * The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple neoHubs.
-* The driver supports Neostat thermostat devices only so far; support has not yet been added for other types of heatmiser devices such as plugs, air sensors, etc, although that is being considered
+* The driver supports Neostat thermostat devices only so far; support has not yet been added for other types of heatmiser devices such as plugs, switches, temperature sensors, etc, although that is being considered
 * The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
 ## neoHub API Access Token Creation
