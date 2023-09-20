@@ -38,9 +38,9 @@ Before proceding, you should have an installed, configured, and operating heatmi
 ### Driver Installation
 The driver is currently available on my test channel [here](https://bestow-regional.api.smartthings.com/invite/Q1jP7BqnNNlL).  Enroll your hub to the channel and then choose "heatmiser v0.1Beta" from the list of drivers to install.  This will result in the driver being installed to your SmartThings hub within 12 hours.
 
-Once the driver is available on your SmartThings hub, the next time you use the SmartThings app to perform an *Add device / Scan for nearby devices*, your network will be scanned for any present heatmiser neoHubs.  When found, a SmartThings device called "Heatmiser neoHub" will be created and found in the same room as your SmartThings hub device.
+Once the driver is available on your SmartThings hub, the next time you use the SmartThings app to perform an *Add device / Scan for nearby devices*, your network will be scanned for any present heatmiser neoHubs.  When found, a SmartThings device called "heatmiser neoHub" will be created and found in the same room as your SmartThings hub device.
 
-Note:  If no neoHub devices are found via the network scan, a "manual" version of the Heatmiser neoHub device will be created instead, which will require configuration of its IP address in device Settings (see neoHub device Configuration below).
+Note:  If no neoHub devices are found via the network scan, a "manual" version of the heatmiser neoHub device will be created instead, which will require configuration of its IP address in device Settings (see neoHub device Configuration below).
 
 ### neoHub Device Configuration
 
