@@ -162,6 +162,7 @@ The elements in all these devices are available in automations in the IF and THE
 * For selecting a Profile, use the "Play a favorite" option in Routine config screens, or the mediaPresets capability in Rules.  For the value to set, use the numeric heatmiser PROFILE_ID, which will be displayed in the Info table 'ACTIVE_PROFILE' element.  Do not use the Profile name.
 
 ### Problems
+* If your heatmiser iOS app is not letting you create an API access token, you may have to borrow an Android device from a friend!
 * If your neoHub device is not found during network scan, be sure it is on the same subnet as your SmartThings hub.  The discovery method used is mDNS; neoHubs should be making themselves known on the network via this method.
 * If your SmartThings neoHub device is not connecting to your neoHub, it is most likely due to an invalid API Access Token.  Check that you have entered it correctly (copy/pasting is the safest way to do it), and that there are no extraneous leading or trailing spaces.
 * If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reinitialization with the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
