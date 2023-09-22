@@ -159,7 +159,7 @@ This is a table of additional useful information related to your neoHub configur
 The elements in all these devices are available in automations in the IF and THEN seconds of Routines or Rules.  
 
 * Thermostat Operating State:  Use only the 'Heating' or 'Idle' values for IF conditions
-* For selecting a Profile, use the "Play a favorite" option in Routine config screens, or the mediaPresets capability in Rules.  For the value to set, use the heatmiser PROFILE_ID, which will be displayed in the Info table 'ACTIVE_PROFILE' element.  Do not use the Profile name.
+* For selecting a Profile, use the "Play a favorite" option in Routine config screens, or the mediaPresets capability in Rules.  For the value to set, use the numeric heatmiser PROFILE_ID, which will be displayed in the Info table 'ACTIVE_PROFILE' element.  Do not use the Profile name.
 
 ### Problems
 * If your neoHub device is not found during network scan, be sure it is on the same subnet as your SmartThings hub.  The discovery method used is mDNS; neoHubs should be making themselves known on the network via this method.
