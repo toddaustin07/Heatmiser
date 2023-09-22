@@ -124,7 +124,7 @@ This is a table of additional useful information to monitor your zone, such as t
 This is a simple SmartThings switch device, providing on/off control for the plug. 
 
 ### neoAir Devices
-These SmartThings devices display the current temperature from the device
+These SmartThings devices display the current temperature from the device.  The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.
 
 ### neoHub Device
 The user can perform a swipe-down gesture on the neoHub Controls screen to force a re-initialization with the neoHub, updating system configuration including hub configuration, profiles, frost setpoints, and configured zones.  If the user has created new profiles or zones, then this re-initialization will refresh the driver data and create any new devices if needed.
