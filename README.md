@@ -53,7 +53,7 @@ Note:  If no neoHub devices are found via the network scan, a "manual" version o
 
 Once your device has been created, you will first need to configure a couple options in the neoHub device Settings screen.  Open the device to the Controls screen and then tap the three vertical dot menu in the upper right corner and select "Settings".
 
-It is recommended to edit these settings *in the reverse order in which they appear* - in other words, for automatically-found neoHub devices, configure the API Access Token last.  For manually created newHub devices, configure the Device Address last.
+**It is recommended to edit these settings *in the reverse order in which they appear*** - in other words, for automatically-found neoHub devices, configure the API Access Token last.  For manually created newHub devices, configure the Device Address last.
 
 ##### Device Address ('manually-created' hub devices only)
 Here you configure the IP address of your neoHub device if it wasn't automatically found during network scan.
