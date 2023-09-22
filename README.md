@@ -168,6 +168,6 @@ The elements in all these devices are available in automations in the IF and THE
 * If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reinitialization with the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
 
 ### Deleting heatmiser Driver Devices
-* If you manually delete any of your SmartThings neoStat devices, they will get re-created the next time the driver connects to the neoHub (this can be forced to happen at any time by swiping down on the neoHub device Controls screen).
+* If you manually delete any of your SmartThings neoStat, neoPlug, or neoAir devices, they will get re-created the next time the driver connects to the neoHub (this can be forced to happen at any time by swiping down on the neoHub device Controls screen).
 
-* If you want to permanently delete all your heatmiser devices, simply delete the neoHub device, and all its associated neoStat devices will also be deleted automatically (they are 'child' devices).
+* If you want to permanently delete all your heatmiser devices, simply delete the neoHub device, and all its associated devices will also be deleted automatically (they are 'child' devices).
