@@ -1,5 +1,7 @@
 # heatmiser SmartThings Driver supporting neoHubs and neoStats
-This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - specifically supporing thermostats (neoStat), plugs (neoPlug), and air (neoAir).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
+This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - specifically supporting thermostats (neoStat), plugs (neoPlug), and air (neoAir) device types. 
+
+As an Edge driver, this offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
 
 ## Supported States and Controls
 #### Thermostats
