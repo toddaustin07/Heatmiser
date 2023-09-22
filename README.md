@@ -1,7 +1,8 @@
 # heatmiser SmartThings Driver supporting neoHubs and neoStats
-This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and Thermostats (neoStats).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
+This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - specifically supporing thermostats (neoStat), plugs (neoPlug), and air (neoAir).  As an Edge driver, it offers completely local processing and requires no other applications running on your LAN.  (The former DTH/Groovy-based driver required an additional bridge application running somewhere on your network)
 
 ## Supported States and Controls
+#### Thermostats
 * Current temperature
 * Operating State (Heat, Idle)
 * Set mode (Auto, Standby)
@@ -10,6 +11,10 @@ This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and Thermostats (
 * Select active Profile
 * Set all thermostats to Standby or Auto
 * Set Away
+#### Plugs
+* On/off switch
+#### Air
+* Current temperature
 
 ### Pre-requisites
 * SmartThings Hub
@@ -21,8 +26,8 @@ Note that the SmartThings hub and heatmiser neoHub devices must reside on the sa
 
 ### Limitations
 * The driver is currently in Beta with a limited number of testers to-date.  It has not been tested with configurations including multiple neoHubs.
-* The driver supports Neostat thermostat devices only so far; support has not yet been added for other types of heatmiser devices such as plugs, switches, temperature sensors, etc, although that is being considered
-* The driver supports heating system only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
+* Not all heatmiser device types are supported (see above)
+* The driver supports heating system thermostats only at this time.  Combination Heating and Cooling systems (neoStat HC) can be supported in the future if requested.
 
 ## neoHub API Access Token Creation
 1. Ensure your mobile device is on the same subnet as your neoHub, and use the heatmiser app and go to *Settings > API* and create a Token.  
@@ -113,14 +118,20 @@ This field generally shows the last time the neoStat data has been updated, or m
 ##### Info
 This is a table of additional useful information to monitor your zone, such as the currently-active profile, away state, available modes, device battery state, and zone name
 
+### neoPlug Devices
+This is a simple SmartThings switch device, providing on/off control for the plug. 
+
+### neoAir Devices
+These SmartThings devices display the current temperature from the device
 
 ### neoHub Device
+The user can perform a swipe-down gesture on the neoHub Controls screen to force a re-initialization with the neoHub, updating system configuration including hub configuration, profiles, frost setpoints, and configured zones.  If the user has created new profiles or zones, then this re-initialization will refresh the driver data and create any new devices if needed.
 
-The user can perform a swipe-down gesture on the Controls screen to force a re-connection with the neoHub if he/she expects the connection has been lost or hub data is not correct.  Generally, the Status field should be used to monitor the connection state.
+Generally, the Status field should be used to monitor the connection state.
 
 Note that if the connection to the hub is lost at any time, there will be an automatic connection retry every 15 seconds, so normally disconnects should eventually recover without user action.
 
-The controls available on this device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Thermostat-specific actions should be performed from the respective neoStat device Controls screen.
+The thermostat-related controls available on the neoHub device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Zone-specific actions should be performed from the respective neoStat device Controls screen.
 
 ##### Status
 Generally this should show "Connected" in normal operation, but if the connection is lost with your neoHub it will show other messages.
@@ -132,7 +143,7 @@ This button allows you to perform a "one-shot" setting of all thermostats to eit
 This button is used to enable or disable Away status for your system.  Note that the "HUB_AWAY" item in the Info table will also show the current Away status.
 
 ##### Set Thermostat Profile
-A list of available Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create Profiles and they are not listed, then force a reconnection/reinitialization with the hub by swiping down on the neoHub Controls screen.
+A list of available Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create new Profiles and they are not listed, then force a reinitialization with the newHub by swiping down on the neoHub device Controls screen.
 
 Keep in mind that the Profile you select must be enabled for the zone requested.
 
@@ -145,7 +156,7 @@ This is a table of additional useful information related to your neoHub configur
 ### Problems
 * If your neoHub device is not found during network scan, be sure it is on the same subnet as your SmartThings hub.  The discovery method used is mDNS; neoHubs should be making themselves known on the network via this method.
 * If your SmartThings neoHub device is not connecting to your neoHub, it is most likely due to an invalid API Access Token.  Check that you have entered it correctly (copy/pasting is the safest way to do it), and that there are no extraneous leading or trailing spaces.
-* If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reconnection to the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
+* If you seem to be missing some of your neoStat devices getting created, try swipping down on the neoHub Controls screen, which will force a reinitialization with the neoHub.  During this process, the list of supported zones is retrieved and if any devices are found to be missing, they will be created.
 
 ### Deleting heatmiser Driver Devices
 * If you manually delete any of your SmartThings neoStat devices, they will get re-created the next time the driver connects to the neoHub (this can be forced to happen at any time by swiping down on the neoHub device Controls screen).
