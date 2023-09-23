@@ -69,32 +69,32 @@ Your neoHub will be polled on a periodic basis to get the latest data from all y
 ##### Temperature Units
 This is defaulted to Celsius, but can be changed to Fahrenheit if that is the temperature-unit at your location.
 
-#### neoStat Device Creation
+#### Child Device Creation
 Once you complete configuration, return to the device Controls screen.  You should now see a Status of "Connected" if your API Access Token was accepted, and you should see a table of information appear in the Info section.
 
-At this point you will also start to see thermostat devices created for each neoStat (or zone) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "neoStat: xxxxxx", where "xxxxxx" is the name of the configured zone.
+At this point you will also start to see devices created for each zone (neoStat/neoPlug/neoAir) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "neoStat: xxxxxx", where "xxxxxx" is the name of the configured zone (or "neoPlug: xxxxxx", or "neoAir: xxxxxx").
 
-Within 15-20 seconds the data should get refreshed in each of the new thermostat devices and show the correct current states.
+Within 15-20 seconds the data should get refreshed in each of the new and show the correct current states.
 
 ### neoStat Device Settings Options
 A neoStat device can optionally be configured as a Timer, so there is a Settings option in the SmartThings neoStat devices that allows you to configure this mode so that the device displays an on/off switch rather than thermostat controls.  This should only be selected if you have first configured your actual neoStat as a Timer using the heatmiser app.  
 
-It may take a few moments for the SmartThings device to be fully updated with the new switch-only device profile.
+Note that it may take a few moments for the SmartThings device to be fully updated in the SmartThings app with the new switch-only device profile.
 
 ## Using the Devices
 
-The devices provide the most critical information and functions for your system, but are not intended to replicate ALL functions of the heatmiser app.  The purpose of having these devices integrated within SmartThings is to give the user a way to build automations that trigger based on thermostat states or that control your thermostats based on other SmartThings device states.
+The devices provide the most critical information and functions for your system, but are not intended to replicate ALL functions of the heatmiser app.  The purpose of having these devices integrated within SmartThings is to give the user a way to build automations that trigger based on heatmiser device states or that control your heatmiser devices based on other SmartThings device states.
 
 ### neoStat Devices
 The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  
+
+If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch control and a status field.
 
 If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
 
 In addition, at any time you can perform a swipe-down gesture on the Controls screen to cause an *immediate* data refresh.
 
-If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch control and a status field.
-
-The following field descriptions apply to a neoStat in standard thermostat mode.
+#### neoStat device Control screen fields in thermostat mode
 
 ##### Temperature
 This shows the current zone temperature.
@@ -137,14 +137,14 @@ This is a simple SmartThings switch device, providing on/off control for the plu
 ### neoAir Devices
 These SmartThings devices display the current temperature from the device.  The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.
 
-### neoHub Device
+### neoHub device Control screen fields
 The user can perform a swipe-down gesture on the neoHub Controls screen to force a re-initialization with the neoHub, updating system configuration including hub configuration, profiles, frost setpoints, and configured zones.  If the user has created new profiles or zones, then this re-initialization will refresh the driver data and create any new devices if needed.
 
 Generally, the Status field should be used to monitor the connection state.
 
 Note that if the connection to the hub is lost at any time, there will be an automatic connection retry every 15 seconds, so normally disconnects should eventually recover without user action.
 
-The thermostat-related controls available on the neoHub device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Zone-specific actions should be performed from the respective neoStat device Controls screen.
+The thermostat-related controls provided on the neoHub device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Zone-specific actions should be performed from the respective neoStat device Controls screen.
 
 ##### Status
 Generally this should show "Connected" in normal operation, but if the connection is lost with your neoHub it will show other messages.
@@ -158,7 +158,7 @@ This button is used to enable or disable Away status for your system.  Note that
 ##### Set Thermostat Profile
 A list of available Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create new Profiles and they are not listed, then force a reinitialization with the newHub by swiping down on the neoHub device Controls screen.
 
-Keep in mind that the Profile you select must be enabled for the zone requested.
+Keep in mind that the Profile you select will be enabled only for the zones for which it was configured.
 
 *Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
@@ -169,6 +169,7 @@ This is a table of additional useful information related to your neoHub configur
 ### Automations
 The elements in all these devices are available in automations in the IF and THEN seconds of Routines or Rules.  
 
+#### Notes
 * Thermostat Operating State:  Use only the 'Heating' or 'Idle' values for IF conditions
 * For selecting a Profile, use the "Play a favorite" option in Routine config screens, or the mediaPresets capability in Rules.  For the value to set, use the numeric heatmiser PROFILE_ID, which will be displayed in the Info table 'ACTIVE_PROFILE' element.  Do not use the Profile name.
 
