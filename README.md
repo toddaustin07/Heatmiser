@@ -137,7 +137,7 @@ This is a simple SmartThings switch device, providing on/off control for the plu
 ### neoAir Devices
 These SmartThings devices display the current temperature from the device.  The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.
 
-### neoHub device Control screen fields
+### neoHub Devices
 The user can perform a swipe-down gesture on the neoHub Controls screen to force a re-initialization with the neoHub, updating system configuration including hub configuration, profiles, frost setpoints, and configured zones.  If the user has created new profiles or zones, then this re-initialization will refresh the driver data and create any new devices if needed.
 
 Generally, the Status field should be used to monitor the connection state.
@@ -145,6 +145,8 @@ Generally, the Status field should be used to monitor the connection state.
 Note that if the connection to the hub is lost at any time, there will be an automatic connection retry every 15 seconds, so normally disconnects should eventually recover without user action.
 
 The thermostat-related controls provided on the neoHub device (Standby All, Away, Set Profile) are intended to be system-wide actions to be performed across all thermostats configured for the neoHub.  Zone-specific actions should be performed from the respective neoStat device Controls screen.
+
+#### neoHub device Control screen fields
 
 ##### Status
 Generally this should show "Connected" in normal operation, but if the connection is lost with your neoHub it will show other messages.
