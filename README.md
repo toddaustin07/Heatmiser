@@ -13,6 +13,8 @@ As an Edge driver, this offers completely local processing and requires no other
 * Select active Profile
 * Set all thermostats to Standby or Auto
 * Set Away
+#### Thermostats in Timer Mode
+* On/off switch
 #### Plugs
 * On/off switch
 #### Air
@@ -74,6 +76,11 @@ At this point you will also start to see thermostat devices created for each neo
 
 Within 15-20 seconds the data should get refreshed in each of the new thermostat devices and show the correct current states.
 
+### neoStat Device Settings Options
+A neoStat device can optionally be configured as a Timer, so there is a Settings option in the SmartThings neoStat devices that allows you to configure this mode so that the device displays an on/off switch rather than thermostat controls.  This should only be selected if you have first configured your actual neoStat as a Timer using the heatmiser app.  
+
+It may take a few moments for the SmartThings device to be fully updated with the new switch-only device profile.
+
 ## Using the Devices
 
 The devices provide the most critical information and functions for your system, but are not intended to replicate ALL functions of the heatmiser app.  The purpose of having these devices integrated within SmartThings is to give the user a way to build automations that trigger based on thermostat states or that control your thermostats based on other SmartThings device states.
@@ -84,6 +91,10 @@ The data shown on these devices will be refreshed at the frequency you configure
 If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
 
 In addition, at any time you can perform a swipe-down gesture on the Controls screen to cause an *immediate* data refresh.
+
+If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch control and a status field.
+
+The following field descriptions apply to a neoStat in standard thermostat mode.
 
 ##### Temperature
 This shows the current zone temperature.
