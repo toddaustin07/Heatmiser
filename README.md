@@ -3,8 +3,8 @@ This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - spe
 
 As an Edge driver, this offers completely local processing and requires no other applications running on your LAN (as compared to the former DTH/Groovy-based driver, which required an additional bridge application running somewhere on your network).
 
-If you get value from using this driver, please consider making a donation to the effort!
-  * [**Buy-me-a-coffee**](https://www.buymeacoffee.com/taustin)
+If you get value from using this driver, please consider making a donation towards the effort!
+  * [**Buy-me-a-coffee**](https://www.buymeacoffee.com/taustin)  (Thank-you!)
 
 ## Supported States and Controls
 #### neoStat
