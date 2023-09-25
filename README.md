@@ -78,7 +78,7 @@ Once you complete configuration, return to the device Controls screen.  You shou
 
 At this point you will also start to see devices created for each zone (neoStat/neoPlug/neoAir) that is known to your neoHub.  These new devices will also be found in the room where your SmartThings hub device is located.  They will have the name of "neoStat: xxxxxx", where "xxxxxx" is the name of the configured zone (or "neoPlug: xxxxxx", or "neoAir: xxxxxx").
 
-Within 15-20 seconds the data should get refreshed in each of the new and show the correct current states.
+Within 15-20 seconds the data should get refreshed in each of the new devices and show the correct current states.
 
 ### neoStat Device Settings Options
 A neoStat device can optionally be configured as a Timer, so there is a Settings option in the SmartThings neoStat devices that allows you to configure this mode so that the device displays an on/off switch rather than thermostat controls.  This should only be selected if you have first configured your actual neoStat as a Timer using the heatmiser app.  
