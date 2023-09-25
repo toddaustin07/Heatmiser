@@ -173,7 +173,7 @@ This is a table of additional useful information related to your neoHub configur
 
 ## Additional Information
 ### Automations
-The elements in all these devices are available in automations in the IF and THEN seconds of Routines or Rules.  
+The elements in all these devices are available in automations in the IF and THEN sections of Routines or Rules.  
 
 #### Notes
 * Thermostat Operating State:  Use only the 'Heating' or 'Idle' values for IF conditions
