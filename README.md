@@ -18,6 +18,7 @@ If you get value from using this driver, please consider making a donation towar
 * Set Away
 #### neoStat configured to be Timer
 * On/off switch
+* Select active Profile
 #### neoPlug
 * On/off switch
 #### neoAir
@@ -91,7 +92,7 @@ The devices provide the most critical information and functions for your system,
 ### neoStat Devices
 The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  
 
-If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch control and a status field.
+If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch, Profile selection control and a status field.
 
 If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
 
