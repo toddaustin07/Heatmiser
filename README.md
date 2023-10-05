@@ -136,11 +136,13 @@ This is a table of additional useful information to monitor your zone, such as t
 #### neoStat device Control screen fields in timer mode
 If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.
 
-##### Timer Swtich Override
+##### Timer Switch Override
 This button allows you to override the timer to manually control the switch output to be either on or off and to cancel the override.  The on or off override is in effect for a specific number of minutes, provided in the next field below.
 
 ##### Override Duration
 This button allows you to provide the number of minutes that the timer switch override will be in effect.  Set this value before you activate an on or off override using the button above.
+
+Note that there is no way to make the override "permanent"; a duration must always be provided.
 
 ##### Set Timer Profile
 A list of available timer Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create timer Profiles and they are not listed, then force a reconnection/reinitialization with the hub by swiping down on the **neoHub** Controls screen.
