@@ -17,7 +17,7 @@ If you get value from using this driver, please consider making a donation towar
 * Set all thermostats to Standby or Auto
 * Set Away
 #### neoStat configured to be Timer
-* On/off switch
+* Override timer to on or off for specific duration
 * Select active Profile
 #### neoPlug
 * On/off switch
@@ -92,8 +92,6 @@ The devices provide the most critical information and functions for your system,
 ### neoStat Devices
 The data shown on these devices will be refreshed at the frequency you configured in the neoHub device Settings.  
 
-If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch, Profile selection control and a status field.
-
 If an action is taken such as changing the thermostat mode or setpoint temperature, then an additional data refresh will occur about 5 seconds after the action.  This will provide more immediate response to your requested actions.
 
 In addition, at any time you can perform a swipe-down gesture on the Controls screen to cause an *immediate* data refresh.
@@ -130,10 +128,30 @@ Keep in mind that the Profile you select must be enabled for the zone requested.
 *Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
 
 ##### Status
-This field generally shows the last time the neoStat data has been updated, or may contain other messages if the neoHub has not been connected to.
+This field generally shows the last time the neoStat data has been updated, or may contain other messages if the neoHub connection has not yet been established.
 
 ##### Info
 This is a table of additional useful information to monitor your zone, such as the currently-active profile, away state, available modes, device battery state, and zone name
+
+#### neoStat device Control screen fields in timer mode
+If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch, Profile selection control and a status field.
+
+##### Timer Swtich Override
+This button allows you to override the timer to manually control the switch output to be either on or off and to cancel the override.  The on or off override is in effect for a specific number of minutes, provided in the next field below.
+
+##### Override Duration
+This button allows you to provide the number of minutes that the timer switch override will be in effect.  Set this value before you activate an on or off override using the button above.
+
+##### Set Timer Profile
+A list of available timer Profiles available on your system will be displayed and can be selected for activation.    The Profiles displayed are those defined at the time the driver and neoHub connected.  If you subsequently create timer Profiles and they are not listed, then force a reconnection/reinitialization with the hub by swiping down on the **neoHub** Controls screen.
+
+*Note that you will have to tolerate the "Tap to choose a favorite" wording here - this is a stock SmartThings capability and that label cannot be tailored.*
+
+##### Active Profile
+This will display the currently active timer profile.  If you had changed the timer profile with the button above, this field should get updated in about 5 seconds.
+
+##### Status
+This field generally shows the last time the neoStat data has been updated, or may contain other messages if the neoHub connection has not yet been established.
 
 ### neoPlug Devices
 This is a simple SmartThings switch device, providing on/off control for the plug. 
