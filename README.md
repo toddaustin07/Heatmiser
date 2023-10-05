@@ -134,7 +134,7 @@ This field generally shows the last time the neoStat data has been updated, or m
 This is a table of additional useful information to monitor your zone, such as the currently-active profile, away state, available modes, device battery state, and zone name
 
 #### neoStat device Control screen fields in timer mode
-If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.  In Timer mode, the device will only include a switch, Profile selection control and a status field.
+If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.
 
 ##### Timer Swtich Override
 This button allows you to override the timer to manually control the switch output to be either on or off and to cancel the override.  The on or off override is in effect for a specific number of minutes, provided in the next field below.
