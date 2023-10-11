@@ -81,9 +81,9 @@ At this point you will also start to see devices created for each zone (neoStat/
 Within 15-20 seconds the data should get refreshed in each of the new devices and show the correct current states.
 
 ### neoStat Device Settings Options
-A neoStat device can optionally be configured as a Timer, so there is a Settings option in the SmartThings neoStat devices that allows you to configure this mode so that the device displays an on/off switch rather than thermostat controls.  This should only be selected if you have first configured your physical neoStat as a Timer using the heatmiser app.  
+A neoStat device can optionally be configured as a Timer, so there is a Settings option in the SmartThings neoStat devices that allows you to configure this mode so that the device displays timer-related controls.  This should only be selected if you have first configured your physical neoStat as a Timer (timeclock) using the heatmiser app.  
 
-Note that it may take a few moments for the neoStat device to be fully updated in the SmartThings app with the new switch-only device profile.
+Note that it may take up to 30 seconds for the device to be fully updated in the SmartThings app with the Timer device profile.
 
 ## Using the Devices
 
