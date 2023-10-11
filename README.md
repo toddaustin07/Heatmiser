@@ -1,5 +1,5 @@
 # heatmiser SmartThings Driver
-This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - specifically supporting thermostats (neoStat), plugs (neoPlug), and air (neoAir) device types. 
+This is a SmartThings Edge Driver for heatmiser Hubs (neoHubs) and devices - specifically supporting thermostats/timers (neoStat), plugs (neoPlug), and air (neoAir) device types. 
 
 As an Edge driver, this offers completely local processing and requires no other applications running on your LAN (as compared to the former DTH/Groovy-based driver, which required an additional bridge application running somewhere on your network).
 
@@ -17,8 +17,8 @@ If you get value from using this driver, please consider making a donation towar
 * Set all thermostats to Standby or Auto
 * Set Away
 #### neoStat configured to be Timer
-* Override timer to on or off for specific duration
-* Select active Profile
+* Set timer mode: auto, standby, override timer to on or off for specific duration
+* Select active timer Profile
 #### neoPlug
 * On/off switch
 #### neoAir
@@ -136,8 +136,14 @@ This is a table of additional useful information to monitor your zone, such as t
 #### neoStat device Control screen fields in timer mode
 If the neoStat device was configured through the heatmiser app to be a Timer, you should have set the corresponding SmartThings neoStat device Settings option as described earlier.
 
-##### Timer Switch Override
-This button allows you to override the timer to manually control the switch output to be either on or off and to cancel the override.  The on or off override is in effect for a specific number of minutes, provided in the next field below.
+##### Timer Switch State
+This field indicates whether the timer switch is on or off
+
+##### Timer Actions
+This button allows you to control the mode of the timer to:
+  * auto - profile schedule controls the timer switch
+  * standby - schedule is disabled and switch is turn off
+  * override - set or cancel overriding switch to on or off for a given duration (provided in next field below)
 
 ##### Override Duration
 This button allows you to provide the number of minutes that the timer switch override will be in effect.  Set this value before you activate an on or off override using the button above.
